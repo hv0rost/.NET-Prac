@@ -23,7 +23,9 @@ namespace main
             Mechanic mechanic = new Mechanic();
             Repair repair = new Repair();
             string str;
-            
+
+            SaveManager info = new SaveManager("test.txt");
+
             switch (sw)
             {
                 case 1:
@@ -70,6 +72,7 @@ namespace main
             car.getCarConsoleInfo();
             mechanic.getMechanicConsoleInfo();
             repair.getRepairConsoleInfo();
+            repair.Write(info);
             Console.WriteLine($"Общая стоимость наряда на ремонт: {repair.CostOfRepair(mechanic.tarif())} рублей.");
 
             File.WriteAllText(@"info.txt", string.Empty);
