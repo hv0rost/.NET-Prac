@@ -1,0 +1,32 @@
+﻿<Properties StartupConfiguration="{524218FD-D5DE-4B63-86F5-223350DD6757}|Default">
+  <MonoDevelop.Ide.ItemProperties.main PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="main/Properties/SaveManager.cs">
+    <Files>
+      <File FileName="main/AutoOwner.cs" Line="1" Column="1" />
+      <File FileName="main/Car.cs" Line="1" Column="1" />
+      <File FileName="main/Mechanic.cs" Line="156" Column="93" />
+      <File FileName="main/Repair.cs" Line="1" Column="1" />
+      <File FileName="main/Program.cs" Line="76" Column="1" />
+      <File FileName="main/Properties/SaveManager.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Kursa4" expanded="True">
+            <Node name="main" expanded="True">
+              <Node name="Properties" expanded="True">
+                <Node name="SaveManager.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

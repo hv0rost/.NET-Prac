@@ -6,13 +6,16 @@ using System.Text;
 
 namespace main
 {
-    public class Mechanic : AutoOwner
+    class Mechanic : AutoOwner
     {
         protected int qualification;
-        
-        public Mechanic(){ }
-            
-public void MechanicConsoleReader()
+
+        public void Write(SaveManager info)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void MechanicConsoleReader()
         {
             bool flag;
             Console.Write("Введите имя механика: ");

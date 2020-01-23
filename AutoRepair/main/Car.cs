@@ -4,7 +4,7 @@ using System.Text;
 
 namespace main
 {
-    public class Car
+    class Car : IWritableObject
     {
         private string autonumber;
         private string brand;
@@ -38,10 +38,6 @@ namespace main
             st.WriteLine($"Номер ПТС: {pts}");
             st.WriteLine("\n===================================================================\n");
             st.Close();
-        }
-
-        public Car()
-        {
         }
 
         public void CarFileReader(string st)
@@ -270,6 +266,11 @@ namespace main
                 
                 if (f1 && f2) break;
             }
+        }
+
+        public void Write(SaveManager info)
+        {
+            throw new NotImplementedException();
         }
     }
 }

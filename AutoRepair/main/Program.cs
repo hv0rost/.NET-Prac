@@ -73,6 +73,7 @@ namespace main
             Console.WriteLine($"Общая стоимость наряда на ремонт: {repair.CostOfRepair(mechanic.tarif())} рублей.");
 
             File.WriteAllText(@"info.txt", string.Empty);
+
             owner.AutoOwnerWriter();
             car.CarWriter();
             mechanic.MechanicWriter();

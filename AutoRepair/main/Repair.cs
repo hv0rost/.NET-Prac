@@ -5,7 +5,7 @@ using System.Xml;
 
 namespace main
 {
-    public class Repair 
+    class Repair : IWritableObject
     {
         private string category;
         private string description;
@@ -243,6 +243,20 @@ namespace main
                 }
                 break;
             }
+        }
+
+        public void Write(SaveManager info)
+        {
+            info.WriteLine("Информация о починке");
+            info.WriteLine($"Дата выдачи наряда: {startofrepair.ToString("yyyy.MM.dd")}");
+            info.WriteLine($"Плановая дата окончания ремонта: {endofrepair_plan.ToString("yyyy.MM.dd")}");
+            info.WriteLine($"Реальная дата окончания ремонта: {endofrepair_real.ToString("yyyy.MM.dd")}");
+            info.WriteLine($"Количество часов потраченых на работу(по плану): {((endofrepair_plan.Subtract(startofrepair).Days) * 8)}");
+            info.WriteLine($"Количество часов потраченых на работу(реальных): {((endofrepair_real.Subtract(startofrepair).Days) * 8)}");
+            info.WriteLine($"Категория работ: {category}");
+            info.WriteLine($"Описание работы: {description}");
+            info.WriteLine("НДС: 20%");
+            info.WriteLine();
         }
     }
 }
