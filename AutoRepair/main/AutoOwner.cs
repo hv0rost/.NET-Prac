@@ -4,7 +4,7 @@ using System.Text;
 
 namespace main
 {
-    public class AutoOwner
+    class AutoOwner : IWritableObject
     {
         private string number;
         protected string FIO;
@@ -32,8 +32,6 @@ namespace main
             st.WriteLine("\n===================================================================\n");
             st.Close();
         }
-
-        public AutoOwner() {  }
 
         public void AutoOwnerFileReader(string st)
         {
@@ -194,6 +192,11 @@ namespace main
                     else break;
                 }
             
+        }
+
+        public void Write(SaveManager info)
+        {
+            throw new NotImplementedException();
         }
     }
 }

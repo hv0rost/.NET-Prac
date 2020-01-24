@@ -5,12 +5,12 @@ using System.Xml;
 
 namespace main
 {
-    public class Repair 
+    class Repair : IWritableObject
     {
         private string category;
         private string description;
         private DateTime endofrepair_plan;
-        private DateTime startofrepair; //2019.3.22 
+        private DateTime startofrepair; 
         private DateTime endofrepair_real;
         private double cost_det;
         private double cost;
@@ -243,6 +243,19 @@ namespace main
                 }
                 break;
             }
+        }
+
+        public void Write(SaveManager info)
+        {
+            info.WriteInfo("Информация о починке");
+            info.WriteInfo($"Дата выдачи наряда: {startofrepair.ToString("yyyy.MM.dd")}");
+            info.WriteInfo($"Плановая дата окончания ремонта: {endofrepair_plan.ToString("yyyy.MM.dd")}");
+            info.WriteInfo($"Реальная дата окончания ремонта: {endofrepair_real.ToString("yyyy.MM.dd")}");
+            info.WriteInfo($"Количество часов потраченых на работу(по плану): {((endofrepair_plan.Subtract(startofrepair).Days) * 8)}");
+            info.WriteInfo($"Количество часов потраченых на работу(реальных): {((endofrepair_real.Subtract(startofrepair).Days) * 8)}");
+            info.WriteInfo($"Категория работ: {category}");
+            info.WriteInfo($"Описание работы: {description}");
+            info.WriteInfo("НДС: 20%");
         }
     }
 }
