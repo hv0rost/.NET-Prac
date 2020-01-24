@@ -25,6 +25,7 @@ namespace main
             Console.WriteLine("\n===================================================================\n");
         }
 
+        /*
         public void CarWriter()
         {
             StreamWriter st = new StreamWriter("info.txt", true, Encoding.GetEncoding(1251));
@@ -39,6 +40,7 @@ namespace main
             st.WriteLine("\n===================================================================\n");
             st.Close();
         }
+        */
 
         public void CarFileReader(string st)
         {
@@ -270,7 +272,14 @@ namespace main
 
         public void Write(SaveManager info)
         {
-            throw new NotImplementedException();
+            info.WriteInfo("Информация о машине");
+            info.WriteInfo($"Номер автомобиля: {autonumber}");
+            info.WriteInfo($"Марка автомобиля: {brand}");
+            info.WriteInfo($"Мощность автомобиля: {power}");
+            info.WriteInfo($"Год выпуска автомобиля: {data}");
+            info.WriteInfo($"Цвет автомобиля: {color}");
+            info.WriteInfo($"Номер ПТС: {pts}");
+            info.WriteInfo("\n===================================================================\n");
         }
     }
 }

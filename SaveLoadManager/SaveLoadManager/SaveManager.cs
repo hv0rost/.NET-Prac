@@ -1,33 +1,33 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Text;
 
-namespace main
-
+namespace SaveLoadManager
 {
-    interface IWritableObject
+    interface ISaveManager
     {
-        void Write(SaveManager info);
+        void WriteLine(string line);
+        void WriteObject(IWritableObject obj);
     }
 
-    class SaveManager
+    interface IWritableObject
+    {
+        void Write(ISaveManager man);
+    }
+    class SaveManager: ISaveManager
     {
         FileInfo file;
 
         public SaveManager(string filename)
         {
             file = new FileInfo(filename);
-            file.CreateText().Close();
         }
 
-        public void WriteInfo(string line)
+        public void WriteLine(string line)
         {
-            /*
-            StreamWriter st = 
-            st.Close();
-            */
-
-            var output = new StreamWriter("info.txt", true, Encoding.GetEncoding(1251));
+            var output = file.AppendText();
             output.WriteLine(line);
             output.Close();
         }

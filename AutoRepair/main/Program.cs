@@ -24,7 +24,7 @@ namespace main
             Repair repair = new Repair();
             string str;
 
-            SaveManager info = new SaveManager("test.txt");
+            SaveManager info = new SaveManager("info.txt");
 
             switch (sw)
             {
@@ -65,6 +65,7 @@ namespace main
                     break;
                 default:
                     Console.WriteLine("Не верно введено значение");
+                    Console.ReadKey();
                     break;
             }
             
@@ -72,15 +73,12 @@ namespace main
             car.getCarConsoleInfo();
             mechanic.getMechanicConsoleInfo();
             repair.getRepairConsoleInfo();
-            repair.Write(info);
             Console.WriteLine($"Общая стоимость наряда на ремонт: {repair.CostOfRepair(mechanic.tarif())} рублей.");
 
-            File.WriteAllText(@"info.txt", string.Empty);
-
-            owner.AutoOwnerWriter();
-            car.CarWriter();
-            mechanic.MechanicWriter();
-            repair.RepairWriter();
+            owner.Write(info);
+            car.Write(info);
+            mechanic.Write(info);
+            repair.Write(info);
             
             StreamWriter s = new StreamWriter("info.txt", true, Encoding.GetEncoding(1251));
             s.WriteLine($"Общая стоимость наряда на ремонт: {repair.CostOfRepair(mechanic.tarif())} рублей.");

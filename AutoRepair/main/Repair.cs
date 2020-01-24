@@ -70,6 +70,7 @@ namespace main
             Console.WriteLine();
         }
 
+        /*
         public void RepairWriter()
         {
             StreamWriter st = new StreamWriter("info.txt", true, Encoding.GetEncoding(1251));
@@ -86,6 +87,7 @@ namespace main
             st.WriteLine();
             st.Close();
         }
+        */
 
         public Repair(){  }
         

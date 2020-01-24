@@ -20,6 +20,7 @@ namespace main
             Console.WriteLine("\n===================================================================\n");
         }
         
+        /*
         public void AutoOwnerWriter()
         {
             StreamWriter st = new StreamWriter("info.txt", true,Encoding.GetEncoding(1251));
@@ -32,6 +33,7 @@ namespace main
             st.WriteLine("\n===================================================================\n");
             st.Close();
         }
+        */
 
         public void AutoOwnerFileReader(string st)
         {
@@ -196,7 +198,12 @@ namespace main
 
         public void Write(SaveManager info)
         {
-            throw new NotImplementedException();
+            info.WriteInfo("Информация об автовладельце");
+            info.WriteInfo($"ФИО владельца: {FIO}");
+            info.WriteInfo($"Номер водительских прав: {number}");
+            info.WriteInfo($"Адрес владельца: {adres}");
+            info.WriteInfo($"Телефон владельца: {phone_number}");
+            info.WriteInfo("\n===================================================================\n");
         }
     }
 }

@@ -6,13 +6,18 @@ using System.Text;
 
 namespace main
 {
-    class Mechanic : AutoOwner
+    class Mechanic : AutoOwner , IWritableObject  
     {
         protected int qualification;
 
         public void Write(SaveManager info)
         {
-            throw new NotImplementedException();
+            info.WriteInfo("Информация о механике");
+            info.WriteInfo($"ФИО механика: {FIO}");
+            info.WriteInfo($"Квалификация (разряд) механика: {qualification}");
+            info.WriteInfo($"Адрес механика: {adres}");
+            info.WriteInfo($"Телефон механика: {phone_number}");
+            info.WriteInfo("\n===================================================================\n");
         }
 
         public void MechanicConsoleReader()
@@ -153,7 +158,8 @@ namespace main
             Console.WriteLine($"Телефон механика: {phone_number}");
             Console.WriteLine("\n===================================================================\n");
         }
-        
+
+        /*
         public void MechanicWriter()
         {
             StreamWriter st = new StreamWriter("info.txt", true,Encoding.GetEncoding(1251));
@@ -166,6 +172,7 @@ namespace main
             st.WriteLine("\n===================================================================\n");
             st.Close();
         }
+        */
         
         public int tarif()
         {
@@ -180,5 +187,7 @@ namespace main
             }
             return 0;
         }
+
+       
     }
 }
