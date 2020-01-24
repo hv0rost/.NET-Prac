@@ -19,21 +19,6 @@ namespace main
             Console.WriteLine($"Телефон владельца: {phone_number}");
             Console.WriteLine("\n===================================================================\n");
         }
-        
-        /*
-        public void AutoOwnerWriter()
-        {
-            StreamWriter st = new StreamWriter("info.txt", true,Encoding.GetEncoding(1251));
-            
-            st.WriteLine("Информация об автовладельце");
-            st.WriteLine($"ФИО владельца: {FIO}");
-            st.WriteLine($"Номер водительских прав: {number}");
-            st.WriteLine($"Адрес владельца: {adres}");
-            st.WriteLine($"Телефон владельца: {phone_number}");
-            st.WriteLine("\n===================================================================\n");
-            st.Close();
-        }
-        */
 
         public void AutoOwnerFileReader(string st)
         {

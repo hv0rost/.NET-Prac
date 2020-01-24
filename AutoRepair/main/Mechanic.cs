@@ -158,22 +158,6 @@ namespace main
             Console.WriteLine($"Телефон механика: {phone_number}");
             Console.WriteLine("\n===================================================================\n");
         }
-
-        /*
-        public void MechanicWriter()
-        {
-            StreamWriter st = new StreamWriter("info.txt", true,Encoding.GetEncoding(1251));
-            
-            st.WriteLine("Информация о механике");
-            st.WriteLine($"ФИО механика: {FIO}");
-            st.WriteLine($"Квалификация (разряд) механика: {qualification}");
-            st.WriteLine($"Адрес механика: {adres}");
-            st.WriteLine($"Телефон механика: {phone_number}");
-            st.WriteLine("\n===================================================================\n");
-            st.Close();
-        }
-        */
-        
         public int tarif()
         {
             switch (qualification)

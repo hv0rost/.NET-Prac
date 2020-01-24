@@ -69,27 +69,6 @@ namespace main
             Console.WriteLine("НДС: 20%");
             Console.WriteLine();
         }
-
-        /*
-        public void RepairWriter()
-        {
-            StreamWriter st = new StreamWriter("info.txt", true, Encoding.GetEncoding(1251));
-
-            st.WriteLine("Информация о починке");
-            st.WriteLine($"Дата выдачи наряда: {startofrepair.ToString("yyyy.MM.dd")}");
-            st.WriteLine($"Плановая дата окончания ремонта: {endofrepair_plan.ToString("yyyy.MM.dd")}");
-            st.WriteLine($"Реальная дата окончания ремонта: {endofrepair_real.ToString("yyyy.MM.dd")}");
-            st.WriteLine($"Количество часов потраченых на работу(по плану): {((endofrepair_plan.Subtract(startofrepair).Days)*8)}");
-            st.WriteLine($"Количество часов потраченых на работу(реальных): {((endofrepair_real.Subtract(startofrepair).Days)*8)}");
-            st.WriteLine($"Категория работ: {category}");
-            st.WriteLine($"Описание работы: {description}");
-            st.WriteLine("НДС: 20%");
-            st.WriteLine();
-            st.Close();
-        }
-        */
-
-        public Repair(){  }
         
         public void RepairFileReader(string st)
         {

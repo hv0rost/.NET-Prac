@@ -25,23 +25,6 @@ namespace main
             Console.WriteLine("\n===================================================================\n");
         }
 
-        /*
-        public void CarWriter()
-        {
-            StreamWriter st = new StreamWriter("info.txt", true, Encoding.GetEncoding(1251));
-
-            st.WriteLine("Информация о машине");
-            st.WriteLine($"Номер автомобиля: {autonumber}");
-            st.WriteLine($"Марка автомобиля: {brand}");
-            st.WriteLine($"Мощность автомобиля: {power}");
-            st.WriteLine($"Год выпуска автомобиля: {data}");
-            st.WriteLine($"Цвет автомобиля: {color}");
-            st.WriteLine($"Номер ПТС: {pts}");
-            st.WriteLine("\n===================================================================\n");
-            st.Close();
-        }
-        */
-
         public void CarFileReader(string st)
         {
             bool f1, f2;

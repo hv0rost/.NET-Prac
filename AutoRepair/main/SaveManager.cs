@@ -22,11 +22,6 @@ namespace main
 
         public void WriteInfo(string line)
         {
-            /*
-            StreamWriter st = 
-            st.Close();
-            */
-
             var output = new StreamWriter("info.txt", true, Encoding.GetEncoding(1251));
             output.WriteLine(line);
             output.Close();
