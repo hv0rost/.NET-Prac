@@ -4,7 +4,7 @@ using System.Text;
 
 namespace main
 {
-    class Car : IWritableObject
+    class Car : IWritableObject, IReadbleObject
     {
         private string autonumber;
         private string brand;

@@ -6,7 +6,7 @@ using System.Text;
 
 namespace main
 {
-    class Mechanic : AutoOwner , IWritableObject  
+    class Mechanic : AutoOwner , IWritableObject, IReadbleObject 
     {
         protected int qualification;
 
@@ -19,7 +19,6 @@ namespace main
             info.WriteInfo($"Телефон механика: {phone_number}");
             info.WriteInfo("\n===================================================================\n");
         }
-
         public void MechanicConsoleReader()
         {
             bool flag;
@@ -171,7 +170,5 @@ namespace main
             }
             return 0;
         }
-
-       
     }
 }

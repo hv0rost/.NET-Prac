@@ -4,7 +4,7 @@ using System.Text;
 
 namespace main
 {
-    class AutoOwner : IWritableObject
+    class AutoOwner : IWritableObject, IReadbleObject
     {
         private string number;
         protected string FIO;

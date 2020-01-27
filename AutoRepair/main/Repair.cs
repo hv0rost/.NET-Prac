@@ -5,7 +5,7 @@ using System.Xml;
 
 namespace main
 {
-    class Repair : IWritableObject
+    class Repair : IWritableObject, IReadbleObject
     {
         private string category;
         private string description;
