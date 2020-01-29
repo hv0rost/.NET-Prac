@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\USER\.NET-Prac\SaveLoadManager" t="IncludeFlat">
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="SaveLoadManager" t="IncludeRecursive">
+        <e p="App.config" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="LoadManager.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="SaveLoadManager.csproj" t="IncludeRecursive" />
+        <e p="SaveManager.cs" t="Include" />
+        <e p="Student.cs" t="Include" />
+      </e>
+      <e p="SaveLoadManager.sln" t="IncludeFlat" />
+    </e>
+    <e p="C:\Users\USER\.Rider2019.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\USER\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_SaveLoadManager.-676441478.00" t="ExcludeRecursive" />
+  </component>
+</project>
