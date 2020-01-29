@@ -31,7 +31,6 @@ namespace SaveLoadManager
 
         public class Loader : IReadableObjectLoader
         {
-            public Loader() {}
             public IReadbleObject Load(ILoadManager man)
             {
                 return new Student(man);

@@ -34,7 +34,7 @@ namespace SaveLoadManager
             return loader.Load(this);
         }
 
-        public void BeginRead()
+        public string BeginRead()
         {
             if (input != null)
                 throw new IOException("Load Error");

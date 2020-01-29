@@ -238,5 +238,97 @@ namespace main
             info.WriteInfo($"Описание работы: {description}");
             info.WriteInfo("НДС: 20%");
         }
+
+        public Repair(ILoadManager st)
+        {
+            int i = 0;
+            string[] text = File.ReadAllLines(st.ToString(), Encoding.GetEncoding(1251));
+
+            foreach (string str in text)
+            {
+                if (str.StartsWith("Дата выдачи наряда:"))
+                {
+                    i = 0;
+                    while (true)
+                    {
+                        try
+                        {
+                            if (i == 0)
+                                startofrepair = DateTime.Parse(str.Substring(str.IndexOf(':') + 2));
+                            else startofrepair = DateTime.Parse(Console.ReadLine());
+                                
+                        }
+                        catch (FormatException)
+                        {
+                            Console.Write("Дата выдачи наряда введена некорректно.  Введите заново: ");
+                            i++;
+                            continue;
+                        }
+                        break;
+                    }
+                }
+                else if (str.StartsWith("Категория работ:"))
+                {
+                    while (true)
+                    {
+                        category = str.Substring(str.IndexOf(':') + 2);
+                        if (!(category == "Капитальный ремонт" || category == "Средний ремонт" ||
+                              category == "Текущий ремонт"))
+                        {
+                            Console.Write("Категория работ введена некорректно. Введите заново:");
+                            category = Console.ReadLine();
+                        }
+                        else break;
+                    }
+                }
+                else if (str.StartsWith("Описание работы:"))
+                {
+                    description = str.Substring(str.IndexOf(':') + 2);
+                }
+                else if (str.StartsWith("Плановая дата окончания ремонта:"))
+                {
+                    i = 0;
+                    while (true)
+                    {
+                        try
+                        {
+                            if (i == 0)
+                                endofrepair_plan = DateTime.Parse(str.Substring(str.IndexOf(':') + 2));
+                            else endofrepair_plan = DateTime.Parse(Console.ReadLine());
+                                
+                        }
+                        catch (FormatException)
+                        {
+                            Console.Write("Плановая дата окончания ремонта введена некорректно.  Введите заново: ");
+                            i++;
+                            continue;
+                        }
+                        break;
+                    }
+                }
+            
+                else if (str.StartsWith("Реальная дата окончания ремонта:"))
+                {
+                    i = 0;
+                    while (true)
+                    {
+                        try
+                        {
+                            if (i == 0)
+                                endofrepair_real = DateTime.Parse(str.Substring(str.IndexOf(':') + 2));
+                            else endofrepair_real = DateTime.Parse(Console.ReadLine());
+                                
+                        }
+                        catch (FormatException)
+                        {
+                            Console.Write("Реальная дата окончания ремонта введена некорректно.  Введите заново: ");
+                            i++;
+                            continue;
+                        }
+                        break;
+                    }
+                }
+            }
+        }
     }
 }
