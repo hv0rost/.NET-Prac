@@ -5,7 +5,7 @@ using System.Xml;
 
 namespace main
 {
-    class Repair : IWritableObject, IReadbleObject
+    class Repair : IWritableObject, IReadableObject
     {
         private string category;
         private string description;
@@ -68,98 +68,6 @@ namespace main
             Console.WriteLine($"Описание работы: {description}");
             Console.WriteLine("НДС: 20%");
             Console.WriteLine();
-        }
-        
-        public void RepairFileReader(string st)
-        {
-            int i = 0;
-            string[] text = File.ReadAllLines(st, Encoding.GetEncoding(1251));
-
-            foreach (string str in text)
-            {
-                if (str.StartsWith("Дата выдачи наряда:"))
-                {
-                    i = 0;
-                    while (true)
-                    {
-                        try
-                        {
-                            if (i == 0)
-                                startofrepair = DateTime.Parse(str.Substring(str.IndexOf(':') + 2));
-                            else startofrepair = DateTime.Parse(Console.ReadLine());
-                                
-                        }
-                        catch (FormatException)
-                        {
-                            Console.Write("Дата выдачи наряда введена некорректно.  Введите заново: ");
-                            i++;
-                            continue;
-                        }
-                        break;
-                    }
-                }
-                else if (str.StartsWith("Категория работ:"))
-                {
-                    while (true)
-                    {
-                        category = str.Substring(str.IndexOf(':') + 2);
-                        if (!(category == "Капитальный ремонт" || category == "Средний ремонт" ||
-                              category == "Текущий ремонт"))
-                        {
-                            Console.Write("Категория работ введена некорректно. Введите заново:");
-                            category = Console.ReadLine();
-                        }
-                        else break;
-                    }
-                }
-                else if (str.StartsWith("Описание работы:"))
-                {
-                    description = str.Substring(str.IndexOf(':') + 2);
-                }
-                else if (str.StartsWith("Плановая дата окончания ремонта:"))
-                {
-                    i = 0;
-                    while (true)
-                    {
-                        try
-                        {
-                            if (i == 0)
-                                endofrepair_plan = DateTime.Parse(str.Substring(str.IndexOf(':') + 2));
-                            else endofrepair_plan = DateTime.Parse(Console.ReadLine());
-                                
-                        }
-                        catch (FormatException)
-                        {
-                            Console.Write("Плановая дата окончания ремонта введена некорректно.  Введите заново: ");
-                            i++;
-                            continue;
-                        }
-                        break;
-                    }
-                }
-            
-                else if (str.StartsWith("Реальная дата окончания ремонта:"))
-                {
-                    i = 0;
-                    while (true)
-                    {
-                        try
-                        {
-                            if (i == 0)
-                                endofrepair_real = DateTime.Parse(str.Substring(str.IndexOf(':') + 2));
-                            else endofrepair_real = DateTime.Parse(Console.ReadLine());
-                                
-                        }
-                        catch (FormatException)
-                        {
-                            Console.Write("Реальная дата окончания ремонта введена некорректно.  Введите заново: ");
-                            i++;
-                            continue;
-                        }
-                        break;
-                    }
-                }
-            }
         }
         
         public void RepairConsoleReader()
@@ -239,96 +147,53 @@ namespace main
             info.WriteInfo("НДС: 20%");
         }
 
-        public Repair(ILoadManager st)
+        public Repair() { }
+        public Repair(string category, string description, DateTime endofrepair_plan,DateTime startofrepair, DateTime endofrepair_real)
         {
-            int i = 0;
-            string[] text = File.ReadAllLines(st.ToString(), Encoding.GetEncoding(1251));
+            this.category = category;
+            this.description = description;
+            this.endofrepair_plan = endofrepair_plan;
+            this.startofrepair = startofrepair;
+            this.endofrepair_real = endofrepair_real;
+        }
 
-            foreach (string str in text)
+        public class Loader : ILoader
+        {
+            public IReadableObject Load(string[] text)
             {
-                if (str.StartsWith("Дата выдачи наряда:"))
+                string category = null;
+                string description = null;
+                DateTime endofrepair_plan = new DateTime();
+                DateTime startofrepair = new DateTime();
+                DateTime endofrepair_real = new DateTime();
+
+                foreach (string str in text)
                 {
-                    i = 0;
-                    while (true)
+                    if (str.StartsWith("Дата выдачи наряда:"))
                     {
-                        try
-                        {
-                            if (i == 0)
-                                startofrepair = DateTime.Parse(str.Substring(str.IndexOf(':') + 2));
-                            else startofrepair = DateTime.Parse(Console.ReadLine());
-                                
-                        }
-                        catch (FormatException)
-                        {
-                            Console.Write("Дата выдачи наряда введена некорректно.  Введите заново: ");
-                            i++;
-                            continue;
-                        }
-                        break;
+                        startofrepair = DateTime.Parse(str.Substring(str.IndexOf(':') + 2));
+                    }
+                    else if (str.StartsWith("Категория работ:"))
+                    {
+                         category = str.Substring(str.IndexOf(':') + 2);
+                    }
+                    else if (str.StartsWith("Описание работы:"))
+                    {
+                        description = str.Substring(str.IndexOf(':') + 2);
+                    }
+                    else if (str.StartsWith("Плановая дата окончания ремонта:"))
+                    {
+                         endofrepair_plan = DateTime.Parse(str.Substring(str.IndexOf(':') + 2));
+                    }
+
+                    else if (str.StartsWith("Реальная дата окончания ремонта:"))
+                    {
+                         endofrepair_real = DateTime.Parse(str.Substring(str.IndexOf(':') + 2));
                     }
                 }
-                else if (str.StartsWith("Категория работ:"))
-                {
-                    while (true)
-                    {
-                        category = str.Substring(str.IndexOf(':') + 2);
-                        if (!(category == "Капитальный ремонт" || category == "Средний ремонт" ||
-                              category == "Текущий ремонт"))
-                        {
-                            Console.Write("Категория работ введена некорректно. Введите заново:");
-                            category = Console.ReadLine();
-                        }
-                        else break;
-                    }
-                }
-                else if (str.StartsWith("Описание работы:"))
-                {
-                    description = str.Substring(str.IndexOf(':') + 2);
-                }
-                else if (str.StartsWith("Плановая дата окончания ремонта:"))
-                {
-                    i = 0;
-                    while (true)
-                    {
-                        try
-                        {
-                            if (i == 0)
-                                endofrepair_plan = DateTime.Parse(str.Substring(str.IndexOf(':') + 2));
-                            else endofrepair_plan = DateTime.Parse(Console.ReadLine());
-                                
-                        }
-                        catch (FormatException)
-                        {
-                            Console.Write("Плановая дата окончания ремонта введена некорректно.  Введите заново: ");
-                            i++;
-                            continue;
-                        }
-                        break;
-                    }
-                }
-            
-                else if (str.StartsWith("Реальная дата окончания ремонта:"))
-                {
-                    i = 0;
-                    while (true)
-                    {
-                        try
-                        {
-                            if (i == 0)
-                                endofrepair_real = DateTime.Parse(str.Substring(str.IndexOf(':') + 2));
-                            else endofrepair_real = DateTime.Parse(Console.ReadLine());
-                                
-                        }
-                        catch (FormatException)
-                        {
-                            Console.Write("Реальная дата окончания ремонта введена некорректно.  Введите заново: ");
-                            i++;
-                            continue;
-                        }
-                        break;
-                    }
-                }
+                return new Repair(category, description, endofrepair_plan, startofrepair, endofrepair_real);
             }
         }
+
     }
 }

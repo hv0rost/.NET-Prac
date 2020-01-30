@@ -26,10 +26,5 @@ namespace main
             output.WriteLine(line);
             output.Close();
         }
-
-        public void WriteObject(IWritableObject obj)
-        {
-            obj.Write(this);
-        }
     }
 }
