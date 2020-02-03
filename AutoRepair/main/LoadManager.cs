@@ -29,17 +29,29 @@ namespace main
         {
             if (input != null)
                 throw new IOException("Load Error");
-
-            input = new StreamReader(file);
+            else
+            {
+                input = new StreamReader(file, Encoding.GetEncoding(1251));
+                DidStartLoad?.Invoke(this,file);
+            }
         }
         public bool IsLoading
         {
             get { return input != null && !input.EndOfStream; }
         }
+
+        public event Action<object, IReadableObject> ObjectDidLoad;
+        public event Action<object, string> DidStartLoad;
+        public event Action<object, string> DidEndLoad;
+
         public void EndRead()
         {
             if (input == null)
                 throw new IOException("Load Error");
+            else
+            {
+                DidEndLoad?.Invoke(this,file);
+            }
 
             input.Close();
         }

@@ -4,6 +4,7 @@
     <e p="C:\Users\USER\.NET-Prac\AutoRepair" t="IncludeFlat">
       <e p="Kursa4.sln" t="IncludeFlat" />
       <e p="main" t="IncludeRecursive">
+        <e p="app.config" t="Include" />
         <e p="AutoOwner.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="Car.cs" t="Include" />

@@ -172,6 +172,7 @@ namespace main
                     if (str.StartsWith("Дата выдачи наряда:"))
                     {
                         startofrepair = DateTime.Parse(str.Substring(str.IndexOf(':') + 2));
+                        
                     }
                     else if (str.StartsWith("Категория работ:"))
                     {

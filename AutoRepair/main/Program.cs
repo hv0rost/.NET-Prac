@@ -17,7 +17,7 @@ namespace main
         {
             
 
-            Console.WriteLine("Выберите способ работы \n 1 - Ввести информацию из файла. \n 2 - Ввести иинформацию в ручную. \n");
+            Console.Write("Выберите способ работы \n 1 - Ввести информацию из файла. \n 2 - Ввести иинформацию в ручную. \n Ввод: ");
             int sw = int.Parse(Console.ReadLine());
 
             AutoOwner owner = new AutoOwner();
@@ -25,7 +25,6 @@ namespace main
             Car car = new Car();
             Mechanic mechanic = new Mechanic();
 
-            
             string str;
 
             SaveManager info = new SaveManager("info.txt");
@@ -67,6 +66,7 @@ namespace main
                 default:
                     Console.WriteLine("Не верно введено значение");
                     Console.ReadKey();
+                    Environment.Exit(0);
                     break;
             }
             

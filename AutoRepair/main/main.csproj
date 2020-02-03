@@ -44,6 +44,7 @@
     <Compile Include="AutoOwner.cs" />
     <Compile Include="Car.cs" />
     <Compile Include="LoadManager.cs" />
+    <Compile Include="Logger.cs" />
     <Compile Include="Mechanic.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
