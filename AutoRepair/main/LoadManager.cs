@@ -32,6 +32,7 @@ namespace main
             else
             {
                 input = new StreamReader(file, Encoding.GetEncoding(1251));
+
                 DidStartLoad?.Invoke(this,file);
             }
         }
@@ -39,7 +40,7 @@ namespace main
         {
             get { return input != null && !input.EndOfStream; }
         }
-
+        
         public event Action<object, IReadableObject> ObjectDidLoad;
         public event Action<object, string> DidStartLoad;
         public event Action<object, string> DidEndLoad;

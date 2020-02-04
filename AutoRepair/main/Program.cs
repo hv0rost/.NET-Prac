@@ -24,7 +24,7 @@ namespace main
             Repair repair = new Repair();
             Car car = new Car();
             Mechanic mechanic = new Mechanic();
-
+            Logger log =  new Logger(Console.Out);
             string str;
 
             SaveManager info = new SaveManager("info.txt");
@@ -46,9 +46,11 @@ namespace main
                         }
                         else break;
                     }
-                    LoadManager loader = new LoadManager(str);
-
+                    
+                    LoadManager loader = new LoadManager(str); 
                     loader.BeginRead();
+
+                    LoadLogger a = new LoadLogger(loader, log);
                     mechanic = loader.Read(new Mechanic.Loader()) as Mechanic;
                     owner = loader.Read(new AutoOwner.Loader()) as AutoOwner;
                     car = loader.Read(new Car.Loader()) as Car;
