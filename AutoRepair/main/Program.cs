@@ -47,10 +47,10 @@ namespace main
                         else break;
                     }
                     
-                    LoadManager loader = new LoadManager(str); 
-                    loader.BeginRead();
-
+                    LoadManager loader = new LoadManager(str);
                     LoadLogger a = new LoadLogger(loader, log);
+
+                    loader.BeginRead();
                     mechanic = loader.Read(new Mechanic.Loader()) as Mechanic;
                     owner = loader.Read(new AutoOwner.Loader()) as AutoOwner;
                     car = loader.Read(new Car.Loader()) as Car;

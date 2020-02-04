@@ -47,11 +47,11 @@ namespace main
         }
         protected virtual void OnDidStartLoad(object sender, string file)
         {
-            log.WriteLine($"Начата загрузка из файла: {file}");
+            log.WriteLine($"{DateTime.Now} Начата загрузка из файла: {file}");
         }
         protected virtual void OnDidEndLoad(object sender, string file)
         {
-            log.WriteLine($"Завершена загрузка из файла: {file}");
+            log.WriteLine($"{DateTime.Now} Завершена загрузка из файла: {file}");
         }
         ~LoadLogger()
         {
