@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>141, 17</value>
+  </metadata>
+  <metadata name="report1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>276, 17</value>
+  </metadata>
+  <data name="report1.ReportResourceString" xml:space="preserve">
+    <value>﻿&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;Report ScriptLanguage="CSharp" ReportInfo.Created="05/02/2020 12:20:44" ReportInfo.Modified="05/02/2020 18:19:06" ReportInfo.CreatorVersion="2020.2.10.0"&gt;
+  &lt;ScriptText&gt;using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Windows.Forms;
+using System.Drawing;
+using System.Data;
+using FastReport;
+using FastReport.Data;
+using FastReport.Dialog;
+using FastReport.Barcode;
+using FastReport.Table;
+using FastReport.Utils;
+
+namespace FastReport
+{
+  public class ReportScript
+  {
+    
+  }
+}
+&lt;/ScriptText&gt;
+  &lt;Dictionary&gt;
+    &lt;TableDataSource Name="Nalog" ReferenceName="database1DataSet1.Nalog" DataType="System.Int32" Enabled="true"&gt;
+      &lt;Column Name="Id" DataType="System.Int32"/&gt;
+      &lt;Column Name="count" DataType="System.Int32"/&gt;
+      &lt;Column Name="cost_proiz" DataType="System.Int32"/&gt;
+      &lt;Column Name="other_cost" DataType="System.Int32"/&gt;
+      &lt;Column Name="cost_paper" DataType="System.Int32"/&gt;
+      &lt;Column Name="fines" DataType="System.Int32"/&gt;
+      &lt;Column Name="cost_dessolution" DataType="System.Int32"/&gt;
+      &lt;Column Name="income" DataType="System.Int32"/&gt;
+      &lt;Column Name="costs" DataType="System.Int32"/&gt;
+      &lt;Column Name="the_tax_base" DataType="System.Int32"/&gt;
+      &lt;Column Name="simplified_tax_system" DataType="System.Double"/&gt;
+      &lt;Column Name="simplified_tax_system_min" DataType="System.Double"/&gt;
+      &lt;Column Name="price_for_one" DataType="System.Int32"/&gt;
+    &lt;/TableDataSource&gt;
+  &lt;/Dictionary&gt;
+  &lt;ReportPage Name="Page1" Watermark.Font="Arial, 60pt"&gt;
+    &lt;ReportTitleBand Name="ReportTitle1" Width="718.2" Height="37.8"&gt;
+      &lt;TextObject Name="Text1" Top="9.45" Width="718.2" Height="28.35" Text="Расчет налогообложеня ИП&amp;#13;&amp;#10;" HorzAlign="Center" VertAlign="Center" Font="Tahoma, 14pt, style=Bold"/&gt;
+    &lt;/ReportTitleBand&gt;
+    &lt;DataBand Name="Data1" Top="41.8" Width="718.2" Height="396.9" StartNewPage="true" DataSource="Nalog"&gt;
+      &lt;TableObject Name="Table1" Width="718.14" Height="396.9"&gt;
+        &lt;TableColumn Name="Column1" Width="425.19"/&gt;
+        &lt;TableColumn Name="Column2" Width="292.95"/&gt;
+        &lt;TableRow Name="Row1" Height="37.8"&gt;
+          &lt;TableCell Name="Cell1" Fill.Color="Silver" Text="Количество изделий" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/&gt;
+          &lt;TableCell Name="Cell2" Fill.Color="Silver" Text="[Nalog.count]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/&gt;
+        &lt;/TableRow&gt;
+        &lt;TableRow Name="Row2" Height="28.35"&gt;
+          &lt;TableCell Name="Cell6" Fill.Color="DarkGray" Text="Цена за единицу&amp;#13;&amp;#10;" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/&gt;
+          &lt;TableCell Name="Cell7" Fill.Color="DarkGray" Text="[Nalog.price_for_one]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/&gt;
+        &lt;/TableRow&gt;
+        &lt;TableRow Name="Row3" Height="28.35"&gt;
+          &lt;TableCell Name="Cell30" Fill.Color="Silver" Text="Расходы на производство и реализацию" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/&gt;
+          &lt;TableCell Name="Cell31" Fill.Color="Silver" Text="[Nalog.cost_proiz]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/&gt;
+        &lt;/TableRow&gt;
+        &lt;TableRow Name="Row4" Height="28.35"&gt;
+          &lt;TableCell Name="Cell37" Fill.Color="DarkGray" Text="Прочие расходы" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/&gt;
+          &lt;TableCell Name="Cell38" Fill.Color="DarkGray" Text="[Nalog.other_cost]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/&gt;
+        &lt;/TableRow&gt;
+        &lt;TableRow Name="Row5" Height="28.35"&gt;
+          &lt;TableCell Name="Cell44" Fill.Color="Silver" Text="Расходы на организацию выпуска ценных бумаг" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/&gt;
+          &lt;TableCell Name="Cell45" Fill.Color="Silver" Text="[Nalog.cost_paper]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/&gt;
+        &lt;/TableRow&gt;
+        &lt;TableRow Name="Row6" Height="28.35"&gt;
+          &lt;TableCell Name="Cell51" Fill.Color="DarkGray" Text="Штрафы" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/&gt;
+          &lt;TableCell Name="Cell52" Fill.Color="DarkGray" Text="[Nalog.fines]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/&gt;
+        &lt;/TableRow&gt;
+        &lt;TableRow Name="Row7" Height="37.8"&gt;
+          &lt;TableCell Name="Cell58" Fill.Color="Silver" Text="Расходы на ликвидацию выводимых основных средств" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/&gt;
+          &lt;TableCell Name="Cell59" Fill.Color="Silver" Text="[Nalog.cost_dessolution]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/&gt;
+        &lt;/TableRow&gt;
+        &lt;TableRow Name="Row8" Height="37.8"&gt;
+          &lt;TableCell Name="Cell60" Text="Расчеты налогообложения" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt" ColSpan="2"/&gt;
+          &lt;TableCell Name="Cell61" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/&gt;
+        &lt;/TableRow&gt;
+        &lt;TableRow Name="Row9" Height="28.35"&gt;
+          &lt;TableCell Name="Cell62" Fill.Color="Silver" Text="Доходы" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/&gt;
+          &lt;TableCell Name="Cell63" Fill.Color="Silver" Text="[Nalog.income]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/&gt;
+        &lt;/TableRow&gt;
+        &lt;TableRow Name="Row10" Height="28.35"&gt;
+          &lt;TableCell Name="Cell64" Fill.Color="DarkGray" Text="Расходы&amp;#13;&amp;#10;" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/&gt;
+          &lt;TableCell Name="Cell65" Fill.Color="DarkGray" Text="[Nalog.costs]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/&gt;
+        &lt;/TableRow&gt;
+        &lt;TableRow Name="Row11" Height="28.35"&gt;
+          &lt;TableCell Name="Cell66" Fill.Color="Silver" Text="Налоговая база" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/&gt;
+          &lt;TableCell Name="Cell67" Fill.Color="Silver" Text="[Nalog.the_tax_base]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/&gt;
+        &lt;/TableRow&gt;
+        &lt;TableRow Name="Row12" Height="28.35"&gt;
+          &lt;TableCell Name="Cell68" Fill.Color="DarkGray" Text="Упрощеннаая система налогообложения" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/&gt;
+          &lt;TableCell Name="Cell69" Fill.Color="DarkGray" Text="[Nalog.simplified_tax_system]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/&gt;
+        &lt;/TableRow&gt;
+        &lt;TableRow Name="Row13" Height="28.35"&gt;
+          &lt;TableCell Name="Cell70" Fill.Color="Silver" Text="Упрощенная система налогообложения(min)" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/&gt;
+          &lt;TableCell Name="Cell71" Fill.Color="Silver" Text="[Nalog.simplified_tax_system_min]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/&gt;
+        &lt;/TableRow&gt;
+      &lt;/TableObject&gt;
+    &lt;/DataBand&gt;
+  &lt;/ReportPage&gt;
+&lt;/Report&gt;
+</value>
+  </data>
+  <metadata name="database1DataSet1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>383, 17</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>42</value>
+  </metadata>
+</root>
